@@ -370,7 +370,7 @@ class Purchases extends MY_Controller
             }
             $data = array(
                 'date' => $date,
-                'reference' => $this->input->post('reference') ? $this->input->post('reference') : $this->site->getReference('ex'),
+                'reference' => $this->input->post('reference') ? $this->input->post('reference') : '' /*$this->site->getReference('ex')*/,
                 'amount' => $this->tec->formatDolar($this->input->post('amount')),
                 'created_by' => $this->session->userdata('user_id'),
                 'note' => $this->input->post('note', TRUE)
